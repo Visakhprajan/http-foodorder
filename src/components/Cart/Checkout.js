@@ -37,7 +37,7 @@ const cityInputRef = useRef();
       name: enteredNameIsValid,
       street: enteredStreetIsValid,
       postalCode: enteredPostalIsValid,
-      city: enteredPostalIsValid
+      city: enteredCityIsValid
     })
 
     const formIsValid = 
@@ -92,6 +92,7 @@ const cityInputRef = useRef();
     <div className={cityControlClasses}>
       <label htmlFor='city'>City</label>
       <input type='text' id='city'  ref={cityInputRef}/>
+      {!formInputValidity.city && <p>Please enter a valid city</p>}
     </div>
     <button type='cancel' onClick={props.onCancel}>Cancel</button>
     <button>Confirm</button>
