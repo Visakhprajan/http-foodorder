@@ -36,8 +36,9 @@ const Cart = (props) => {
         orderedItems: cartCtx.items
       })
     });
-    setIsSubmitting(false)
-    setdidSubmitting(true)
+    setIsSubmitting(false);
+    setdidSubmitting(true);
+    cartCtx.clearCart()
   }
 
 
